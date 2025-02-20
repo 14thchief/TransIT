@@ -5,11 +5,6 @@ import { ReactNode } from "react";
 const AuthLayout = ({ children }: { children?: ReactNode }) => {
   return (
     <div className={styles.auth_layout}>
-      {/* <header>
-				<p>Don't have an account?</p>
-				<Link to={} />
-			</header> */}
-
       <div className={`${!children ? styles.body : ""}`}>
         {children || <Outlet />}
       </div>

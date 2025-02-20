@@ -6,6 +6,18 @@
   background-image: url("/src/assets/images/landingpage.png");
   background-size: cover;
   background-position: left top;
+  /* Fade in the background image (if needed) */
+  animation: fadeInBg 1.5s ease-in-out;
+
+  /* Sunset gradient placeholder before the image loads */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, #1b2735, #d78c48, #f2c777);
+    z-index: 0;
+    animation: fadeOutPlaceholder 1.5s ease-in-out forwards;
+  }
 
   @include mq(map-get($screen-sizes, "medium")) {
     // padding-top: 96px;
@@ -18,6 +30,9 @@
     min-height: 5.32rem;
     padding: 0 7.5rem;
     background-color: #fff;
+    /* Ensure header appears above the placeholder */
+    position: relative;
+    z-index: 1;
 
     @include maxq(map-get($screen-sizes, "medium")) {
       padding: 0 32px;
@@ -31,6 +46,9 @@
     @include flex(row, 0);
     justify-content: flex-end;
     align-items: center;
+    /* Ensure content appears above the placeholder */
+    position: relative;
+    z-index: 1;
 
     @include maxq(map-get($screen-sizes, "medium")) {
       padding: 30px 32px;
@@ -44,5 +62,25 @@
     button[type="submit"] {
       margin-top: 8px;
     }
+  }
+}
+
+/* Fade-in animation for the background image */
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade-out animation for the sunset gradient placeholder */
+@keyframes fadeOutPlaceholder {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
