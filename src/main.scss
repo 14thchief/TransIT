@@ -1,0 +1,109 @@
+@use "./scss/variables" as *;
+@use "./scss/globals";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  font-family: "Roboto", Poppins, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: rgba(27, 114, 50, 1);
+  --secondary-color: rgba(16, 24, 40, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $color-deepgrey;
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-deepgrey;
+    border-radius: 10px;
+    max-height: 20px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: $font-primary;
+  letter-spacing: 0.25px;
+}
+
+p {
+  font-size: font-size(p);
+  font-weight: font-weight(p);
+  color: $color-text;
+}
+
+a,
+a:visited,
+a:active {
+  font-size: font-size(a);
+  font-weight: font-weight(a);
+  text-decoration: none;
+  color: $color-text;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: font-size(button);
+  font-weight: font-weight(button);
+  font-family: "Roboto";
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  font-size: font-size(li);
+  font-weight: font-weight(li);
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-primary;
+  color: $color-text;
+}
+
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  color: $color-subtext;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+svg {
+  vertical-align: middle;
+}

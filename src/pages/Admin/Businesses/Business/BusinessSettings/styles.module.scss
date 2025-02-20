@@ -1,0 +1,57 @@
+.container {
+    // border: red solid 2px;
+    height: 100%;
+    @include flex(row, rem(32px));
+    flex-wrap: wrap;
+    flex: 1;
+    padding: rem(24px) 0;
+
+    .card {
+        min-height: rem(88px);
+        min-width: rem(320px);
+        max-width: max-content;
+        padding: rem(28px) rem(32px);
+        @include flex(row, rem(10px));
+        flex: 1 1 0;
+        align-items: center;
+        border-radius: rem(4px);
+        background-color: #fff;
+        color: #000000;
+        font-weight: 600;
+        box-shadow: 
+            0px 4px 37px 0px #0000000D, 
+            0px 4px 37px 0px #0000000D,
+            0px 4px 37px 0px #0000000D;
+        cursor: pointer;
+        scale: 98.5%;
+        transition: 100ms ease-in-out;
+
+        &:hover {
+            scale: 99%;
+        }
+
+        &:active {
+            scale: 100%;
+        }
+
+        & > :last-child {
+            margin-left: auto;
+            font-size: 1.25rem;
+            color: #747474;
+        }
+    }
+
+    .subPage {
+        @include flex(column, rem(24px));
+        flex: 1;
+
+        .goBack {
+            cursor: default;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,112 @@
+@use "./variables" as *;
+@import "tailwindcss";
+.input_main {
+  @include flex(column, 0.25rem);
+  // width: 100%;
+  max-width: $input-max-width;
+  // min-width: $input-min-width;
+
+  .input_body {
+    position: relative;
+    @include flex(column, 0.4rem);
+    background: none;
+
+    & > div {
+      border: 1px solid $color-border;
+      border-radius: 4px;
+      position: relative;
+      @include flex(row, 0);
+      padding: rem(12px) rem(20px);
+      min-height: 3.82rem;
+      color: $color-text;
+
+      &.disabled,
+      &.readonly {
+        background-color: rgba(225, 231, 236, 0.5);
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  label {
+    color: $color-text;
+    font-weight: 500;
+    font-size: rem(15px);
+    span {
+      color: $color-red;
+    }
+
+    .spinner {
+      width: rem(14px);
+    }
+  }
+
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: rem(12px);
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+
+    &::placeholder {
+      color: $color-alt-text;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+    }
+
+    &:focus-within {
+      border: none;
+      outline: none;
+      background: none;
+    }
+
+    &[type="checkbox"] {
+      border: 1px solid $color-border-deep;
+      background-color: $color-lightgrey;
+      border-radius: 6px;
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    &:disabled,
+    &:readonly {
+      background-color: $color-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  textarea {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+  .select_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .error {
+    color: $color-red;
+    font-size: font-size("p-sm");
+  }
+
+  .hint {
+    color: $color-alt-text;
+    font-size: font-size("p-sm");
+  }
+
+  .password,
+  .tooltip {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 50%;
+    transform: translateY(62.5%);
+    font-size: 1.25rem;
+    color: $color-text;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,30 @@
+.react-tabs__tab-list {
+	min-width: max-content;
+	border-bottom: 1px solid #eaecf0;
+}
+
+.react-tabs__tab {
+	color: $color-subtext;
+	font-size: 1rem;
+	line-height: 24px;
+	text-transform: capitalize;
+}
+
+.react-tabs__tab--selected {
+	border: 1px solid transparent;
+	border-radius: 5px 5px 0 0;
+	padding-bottom: 12px;
+	border-bottom: 3px solid lighten($color-primary, 10%);
+	color: $color-black;
+	text-transform: capitalize;
+	background-color: transparent;
+	font-weight: 600;
+}
+
+.react-tabs__tab:focus:after {
+	content: none;
+}
+
+.react-datepicker {
+	right: 5rem;
+}

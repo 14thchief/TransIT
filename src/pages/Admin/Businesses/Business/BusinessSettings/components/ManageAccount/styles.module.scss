@@ -1,0 +1,68 @@
+.container {
+    // border: red solid 2px;
+
+    .statusContainer {
+        @include flex(column, 0.5rem);
+        justify-content: center;
+
+        p {
+            font-size: rem(16px);
+            font-weight: 400;
+            color: $color-subtext;
+        }
+
+        .toggleContainer {
+            @include flex(row, 0rem);
+            align-items: center;
+            max-width: max-content;
+
+            p {
+                margin-top: -rem(4px);
+                color: $color-black;
+                font-size: rem(18px);
+            }
+        }
+    }
+
+    .accountHistory {
+        padding: rem(32px) 0;
+        @include flex(column, rem(24px));
+
+        .title {
+            border-bottom: $color-black 1px solid;
+            max-width: rem(142px);
+            min-height: rem(48px);
+            @include flex(row, 1rem, center);
+        }
+
+        .actionText {
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+    }
+}
+
+
+.actionContentContainer {
+    @include flex(column, 1rem);
+
+    p {
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .reason {
+        @include flex(column, 0.25rem);
+        align-items: flex-start;
+        // border: blue solid 2px;
+    
+        textarea {
+            width: 100%;
+            padding: 0.25rem;
+            // border: red solid 2px;
+        }
+    }
+
+}

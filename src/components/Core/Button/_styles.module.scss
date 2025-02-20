@@ -1,0 +1,206 @@
+%button {
+  @include flex(row, 0.75rem, center);
+  width: rem(305px);
+  height: rem(64px);
+  border-radius: rem(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(95.67deg, #007cc2 49.79%, #73de63 151.76%);
+  color: white;
+  font-size: rem(18px);
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.9; // Slight fade effect on hover
+  }
+
+  &:active {
+    opacity: 0.8; // More fade effect when clicked
+  }
+
+  span {
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.icon_right {
+    flex-direction: row-reverse;
+  }
+}
+
+%text {
+  font-family: "Roboto";
+  color: $color-primary;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  @include flex(row, 0.25rem, center);
+
+  &.icon_right {
+    flex-direction: row-reverse;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: $color-lightgrey;
+      // border-radius: 8px;
+    }
+
+    &:focus {
+      background-color: #f5f8fa;
+      border: 1px solid rgba(36, 66, 44, 1);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  // &:active {
+  // 	background-color: $color-primary-500;
+  // 	border: 1px solid $color-primary-500;
+  // 	color: $color-lightgrey;
+  // }
+}
+
+.main {
+  @extend %button;
+  background-color: $color-primary;
+  color: #fff !important;
+  min-height: 40px;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease-in-out;
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+
+    &:focus,
+    &:active {
+      background-color: lighten($color-primary, 1%);
+      border: 2px solid lighten($color-primary, 1%);
+    }
+  }
+
+  // &:active {
+  // 	background-color: #062400;
+  // }
+}
+
+.alt {
+  @extend %button;
+  background-color: #fff;
+  color: $color-primary;
+  border: 1px solid #d0d5dd;
+  box-shadow: $box-shadow-xs;
+  min-height: 40px;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: #f2f2fc;
+      border: 1px solid #24422c;
+    }
+
+    &:focus {
+      background-color: #f5f8fa;
+      border: 1px solid #24422c;
+    }
+
+    &:active {
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      color: $color-lightgrey;
+    }
+  }
+}
+
+.main-reverse {
+  @extend %button;
+  background-color: #fff;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  min-height: 40px;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: #f2f2fc;
+      border: 1px solid #24422c;
+    }
+
+    &:focus {
+      background-color: #f5f8fa;
+      border: 1px solid #24422c;
+    }
+
+    &:active {
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      color: $color-lightgrey;
+    }
+  }
+}
+
+.grey {
+  @extend %button;
+  background-color: #fff;
+  border: rem(1px) solid $color-border-light;
+  color: $color-text;
+  font-weight: 600;
+}
+
+.text {
+  @extend %text;
+}
+
+.underlined {
+  @extend %text;
+  text-decoration: underline;
+}
+
+.transparent {
+  background: transparent;
+}
+
+.full {
+  width: 100%;
+  max-width: 100%;
+}
+
+.fit {
+  width: fit-content;
+  max-width: fit-content;
+}
+
+.loading {
+  max-width: 24px;
+}
+
+.big {
+  padding: 1rem 2rem;
+}
+
+.medium {
+  padding: rem(12px) 2rem;
+}
+
+.small {
+  padding: 10px 16px;
+}
+
+.very-small {
+  padding: 4px 12px;
+  font-size: 12px;
+  width: 60px;
+}

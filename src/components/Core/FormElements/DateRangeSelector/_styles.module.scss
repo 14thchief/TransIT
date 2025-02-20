@@ -1,0 +1,27 @@
+
+.dateRangePickerWrapper {
+    max-width: 100%;
+    min-width: rem(320px);
+    // border: red solid 2px;
+    position: relative;
+}
+
+.month {
+    max-width: 100%;
+    min-width: 100%;
+    // display: none;
+    position: absolute;
+    z-index: 99;
+    background-color: white;
+
+    &Active {
+        @extend .month;
+        display: block;
+    }
+    // border: red solid 2px;
+}
+
+.monthAndYearWrapper {
+    // border: red solid 2px;
+    // display: none;
+}

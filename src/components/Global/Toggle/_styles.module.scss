@@ -1,0 +1,6 @@
+.switch {
+  @include flex(row, 0, start);
+  max-width: max-content;
+  margin-left: -0.4rem;
+  transform: scale(0.65);
+}

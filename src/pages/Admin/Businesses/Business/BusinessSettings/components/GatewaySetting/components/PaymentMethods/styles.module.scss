@@ -1,0 +1,95 @@
+.container {
+  padding: 1rem 0;
+
+  .list {
+    .listRow {
+      @include flex(row, 2rem, space);
+      align-items: center;
+      padding: 1rem 0;
+      min-height: rem(72px);
+      border-bottom: solid 1px $color-border-light;
+
+      .titleLogo {
+        @include flex(row, 0.5rem);
+        max-width: 80%;
+        flex: 1 1 0;
+
+        .logo {
+          .imgContainer {
+            @include flex(row, 0rem, center);
+            max-height: rem(32px);
+            max-width: rem(32px);
+            min-height: rem(32px);
+            min-width: rem(32px);
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+
+            img {
+              // @include flex(row, 0, center);
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+
+          .defaultLogo {
+            padding: rem(5px);
+            min-height: rem(32px);
+            min-width: rem(32px);
+            border-radius: 50%;
+            background-color: $color-primary;
+            @include flex(row, 0, center);
+
+            p {
+              color: #fff;
+            }
+          }
+        }
+
+        .titleDesc {
+          @include flex(column, 0.25rem, center);
+        }
+      }
+
+      .statusAction {
+        @include flex(row, rem(44px), space);
+        align-items: center;
+        min-width: rem(320px);
+
+        .status {
+          font-weight: 600;
+          font-size: rem(14px);
+
+          &.online {
+            color: lighten(#388d65, 5%);
+          }
+
+          &.offline {
+            color: #e51414;
+          }
+        }
+
+        .action {
+          @include flex(row, 0.25rem);
+          align-items: center;
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          background-color: #f1faf9;
+
+          & > :first-child {
+            // border: red solid 2px;
+            color: $color-grey-text !important;
+            rotate: 45deg;
+            filter: grayscale(1);
+          }
+
+          p {
+            font-size: rem(12px);
+            font-weight: 400;
+            color: $color-grey-text;
+          }
+        }
+      }
+    }
+  }
+}

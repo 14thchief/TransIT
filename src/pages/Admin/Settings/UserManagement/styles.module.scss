@@ -1,0 +1,43 @@
+.toggleWrapper {
+  @include flex(column, 0.5rem);
+
+  p {
+    font-size: rem(14px);
+  }
+
+  .toggleLabel {
+    min-width: rem(156px);
+    min-height: rem(36px);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid lighten($color-black, 40%);
+    @include flex(row, 0.4rem);
+    align-items: center;
+    text-transform: capitalize;
+    font-size: rem(14px) !important;
+  }
+
+  .resendButton {
+    @extend .toggleLabel;
+    padding: .8rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff !important;
+    }
+  }
+}
+
+.buttonsRow {
+  @include flex(row, 0.5rem, space);
+}
+
+.selectLabel {
+  @include flex(column, 0.5rem);
+
+  select {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+  }
+}

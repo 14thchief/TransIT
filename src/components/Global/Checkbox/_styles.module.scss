@@ -1,0 +1,37 @@
+$checkboxSize: rem(18px);
+
+.checkbox_container {
+	display: flex;
+	gap: 10px;
+
+	span {
+		cursor: pointer;
+	}
+
+	.checkbox {
+		position: relative;
+		width: $checkboxSize;
+		height: $checkboxSize;
+		cursor: pointer;
+		border: .5px solid $color-black;
+
+		&.active {
+			background-color: $color-primary;
+			border-color: $color-primary;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: rem(8px);
+				height: rem(5px);
+				box-sizing: border-box;
+				border-left: rem(2px) solid $color-lightgrey;
+				border-bottom: rem(2px) solid $color-lightgrey;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(-45deg);
+				margin-top: rem(-1px);
+			}
+		}
+	}
+}

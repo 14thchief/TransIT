@@ -1,0 +1,21 @@
+.copyContainer {
+    @include flex(row, .5rem, center);
+    font-size: 1.25rem;
+    align-items: center;
+    background-color: $color-light-button;
+    width: rem(89px);
+    height: rem(39px);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: $color-grey-text;
+    cursor: pointer;
+
+    p {
+        color: $color-grey-text;
+    }
+
+    .copied {
+        @include flex(row, .5rem);
+        color: #01821D;
+    }
+}

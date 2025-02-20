@@ -1,0 +1,17 @@
+.card {
+	display: grid;
+	gap: 32px;
+
+	@include mq(map-get($screen-sizes, "medium")) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include mq(map-get($screen-sizes, "big")) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.list {
+	display: grid;
+	gap: 16px;
+}

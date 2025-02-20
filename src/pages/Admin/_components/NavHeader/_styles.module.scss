@@ -1,0 +1,32 @@
+.header {
+	padding-bottom: 24px;
+	@include flex(row, 4px, start);
+	flex-wrap: wrap;
+
+	.link:first-child svg {
+		display: none;
+	}
+
+	.link,
+	.link:visited,
+	.link_disabled {
+		color: $color-alt-text;
+		font-weight: 500;
+		line-height: 24px;
+		font-size: font-size("p");
+
+		svg {
+			margin-right: 8px;
+		}
+	}
+
+	.link:hover,
+	.link:visited:hover {
+		color: $color-primary;
+		text-decoration: underline;
+	}
+
+	.link_disabled {
+		color: $color-primary;
+	}
+}

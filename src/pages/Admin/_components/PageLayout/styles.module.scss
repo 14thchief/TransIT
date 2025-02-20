@@ -1,0 +1,26 @@
+.container {
+	margin: 0 auto;
+	// max-width: 1600px;
+	// border: red solid 2px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	align-items: center;
+	padding-bottom: 48px;
+
+	&.screen {
+		max-height: calc(87.5dvh - $navHeaderHeight);
+	}
+
+	@include maxq(map-get($screen-sizes, "medium")) {
+		gap: 20px;
+	}
+
+	section.header_container {
+		width: 100%;
+	}
+
+	section.children_container {
+		width: 100%;
+	}
+}

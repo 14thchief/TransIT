@@ -1,0 +1,22 @@
+.container {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin: 10px 0;
+
+	button {
+		min-width: max-content;
+		width: rem(100px);
+		height: rem(32px);
+		border-radius: 4px;
+		padding: 10px 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $color-border-light;
+		color: $color-subtext;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}

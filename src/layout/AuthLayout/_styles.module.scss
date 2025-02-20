@@ -1,0 +1,48 @@
+.auth_layout {
+  min-height: 100dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/src/assets/images/landingpage.png");
+  background-size: cover;
+  background-position: left top;
+
+  @include mq(map-get($screen-sizes, "medium")) {
+    // padding-top: 96px;
+    // padding-bottom: 96px;
+  }
+
+  header {
+    @include flex(row, 0);
+    align-items: center;
+    min-height: 5.32rem;
+    padding: 0 7.5rem;
+    background-color: #fff;
+
+    @include maxq(map-get($screen-sizes, "medium")) {
+      padding: 0 32px;
+    }
+  }
+
+  .body {
+    padding: 1.875rem 7.5rem;
+    color: $color-text;
+    flex: 1;
+    @include flex(row, 0);
+    justify-content: flex-end;
+    align-items: center;
+
+    @include maxq(map-get($screen-sizes, "medium")) {
+      padding: 30px 32px;
+    }
+  }
+
+  form {
+    display: grid;
+    gap: 24px;
+
+    button[type="submit"] {
+      margin-top: 8px;
+    }
+  }
+}

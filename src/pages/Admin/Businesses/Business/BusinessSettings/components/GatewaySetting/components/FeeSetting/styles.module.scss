@@ -1,0 +1,33 @@
+.container {
+    padding: 1rem 0;
+
+    .title {
+        font-weight: 600;
+        color: $color-black;
+        margin-bottom: 1.5rem;
+    }
+    
+    div {
+        @include flex(column, 1rem);
+
+        small {
+            color: $color-grey-text;
+            font-size: rem(12px);
+        }
+    
+        .cards {
+            @include flex(row, rem(12px));
+            align-items: center;
+    
+            label {
+                @include flex(row, rem(10px), center);
+                padding: rem(14px) rem(16px);
+                background-color: #fff;
+                border-radius: rem(4px);
+                border: 1px solid #E7ECE8;
+            }
+        }
+    }
+
+    
+}

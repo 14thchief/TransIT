@@ -1,0 +1,21 @@
+.iconContainer {
+    min-width: rem(40px);
+    min-height: rem(40px);
+    border-radius: rem(8px);
+    @include flex(row, 1rem, center);
+
+    &.success {
+        background-color: #01821D66;
+        color: #01821D;
+    }
+    
+    &.warning {
+        background-color: #E1B74E66;
+        color: #E1B74E;
+    }
+    
+    &.critical {
+        background-color: #F2282866;
+        color: #F22828;
+    }
+}

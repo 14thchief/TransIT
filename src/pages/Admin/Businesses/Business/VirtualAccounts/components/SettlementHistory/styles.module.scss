@@ -1,0 +1,99 @@
+.action {
+    @include flex(row, 1rem);
+    justify-content: flex-start;
+    margin-bottom: .5rem;
+
+    & > * {
+        max-width: max-content;
+    }
+}
+
+
+.goBack {
+    @include flex(row, rem(8px));
+    align-items: center;
+    cursor: pointer;
+    min-width: max-content;
+    padding: 1.5rem 0;
+}
+
+.link {
+    // text-decoration: underline;
+    // font-size: 90%;
+    color: darken($color-primary, 20%);
+    cursor: pointer;
+}
+
+.tableActions {
+    @include flex(row, .25rem);
+
+    & > * {
+        color: #000;
+        max-width: max-content;
+        padding: .5rem;
+    }
+}
+
+.formItemsContainer {
+    // border: gold solid 2px;
+    @include flex(column, 2rem);
+
+    .formItem {
+        border-bottom: $color-lightgrey solid 2px;
+        padding-bottom: 2rem;
+        @include flex(column, 1rem);
+
+        .accountName {
+            font-size: .875rem;
+            margin-top: -.5rem;
+
+            &.error {
+                color: $color-red;
+            }
+
+            &.success {
+                color: $color-success;
+            }
+        }
+    }
+
+    button {
+        @include flex(row, .25rem);
+        align-items: center;
+        max-width: max-content;
+        font-size: 0.85rem;
+        font-weight: 600;
+
+        &.remove {
+            color: $color-red;
+        }
+
+        &.add {
+            color: $color-green-700;
+        }
+    }
+}
+
+.config {
+    @include flex(column, 1.5rem);
+}
+
+
+
+.button {
+    @include flex(row, .25rem);
+    align-items: center;
+    max-width: max-content;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    &.add {
+        color: $color-green-700;
+        align-self: flex-end;
+    }
+}
+
+.buttonContainer {
+    @include flex(row, 1rem);
+}
+

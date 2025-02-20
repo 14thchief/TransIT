@@ -1,0 +1,109 @@
+$text-size: 13px;
+
+.table_footer {
+	@include flex(row, 1rem, space);
+	padding: 1rem;
+	flex-wrap: wrap-reverse;
+
+	@include maxq(450px) {
+		flex: 1 1 0;
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	section.left {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+
+		@include maxq(450px) {
+			flex: 1 1 0;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		label {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: $color-text;
+			font-size: $text-size;
+
+			input,
+			select {
+				font-size: $text-size;
+				text-align: center;
+				border: $color-border-light solid 1px;
+				border-radius: 8px;
+				color: $color-subtext;
+				width: min-content;
+				height: 32px;
+				padding: 2px;
+			}
+		}
+	}
+
+	section.right {
+		// border: green solid 2px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.2rem;
+
+		button.navButton {
+			border: lighten(#000000, 20%) solid 1px;
+			color: lighten(#000000, 20%);
+			font-weight: 600;
+			border-radius: 8px;
+			width: 80px;
+			height: 32px;
+			font-size: $text-size;
+
+			&:disabled {
+				border: $color-disabled solid 1px;
+				color: $color-disabled;
+				cursor: not-allowed;
+			}
+		}
+
+		.pageIndiceContainer {
+			display: flex;
+			gap: 0.5rem;
+
+			button {
+				font-size: $text-size;
+				color: $color-subtext;
+				border-radius: 50%;
+				width: 24px;
+				min-width: max-content;
+				height: 24px;
+
+				&.activeIndex {
+					background-color: #d3d9d5;
+				}
+			}
+
+			p {
+				color: $color-disabled;
+			}
+		}
+
+		@include maxq(450px) {
+			flex: 1 1 0;
+			width: 100%;
+
+			button.navButton {
+				height: 28px;
+				width: 28px;
+				font-size: 10px;
+				overflow: hidden;
+				border-radius: 50%;
+			}
+
+			.pageIndiceContainer {
+				display: flex;
+				gap: 0.2rem;
+			}
+		}
+	}
+}

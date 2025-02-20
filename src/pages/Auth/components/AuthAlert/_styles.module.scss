@@ -1,0 +1,27 @@
+.status {
+	&_imageWrapper {
+		text-align: center;
+
+		img {
+			width: rem(232px);
+		}
+	}
+
+	&_body {
+		margin: 20px 0 32px 0;
+		text-align: center;
+
+		p {
+			color: $color-subtext;
+			font-size: font-size("p-sm");
+			line-height: 20px;
+			font-weight: 400;
+			margin-top: 8px;
+		}
+	}
+
+	&_buttons {
+		display: grid;
+		gap: 12px;
+	}
+}

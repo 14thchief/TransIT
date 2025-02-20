@@ -1,0 +1,59 @@
+
+.container {
+    @include flex(column, 24px);
+    max-width: 34rem;
+    // min-height: 30.7rem;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    padding: 3rem 1.5rem;
+    background-color: #fff;
+
+    @include maxq(map-get($screen-sizes, "medium")) {
+        min-width: 100%;
+        padding: 1rem;
+    }
+
+    .heading {
+        @include flex(column, 4px);
+
+        h3 {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: $color-light-text;
+        }
+    }
+
+    form.loginForm {
+        @include flex(column, 24px);
+    }
+
+    small.error {
+        color: red;
+        position: relative;
+        top: -0.75rem;
+    }
+
+    .buttonContainer {
+        @include flex(column, 1.5rem);
+        align-items: center;
+
+        a {
+            text-decoration: underline;
+            color: $color-primary;
+            font-size: 1rem;
+        }
+    }
+
+}
+
+.link {
+    // text-decoration: underline;
+    color: $color-primary !important;
+    font-size: 1rem;
+}

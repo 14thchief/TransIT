@@ -1,0 +1,46 @@
+.logo {
+  @include flex(row, 0.5rem, start);
+
+  img {
+    max-width: 48px;
+  }
+
+  h2 {
+    letter-spacing: 2px;
+    font-family: $font-secondary;
+  }
+}
+
+.medium {
+  img {
+    max-width: 44px;
+  }
+
+  h2 {
+    letter-spacing: 1.5px;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: $font-secondary;
+    color: $color-primary;
+  }
+}
+
+.small {
+  img {
+    max-width: 40px;
+  }
+
+  h2 {
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $font-secondary;
+  }
+}
+
+.large {
+  
+  img {
+    max-width: 100px;
+  }
+}

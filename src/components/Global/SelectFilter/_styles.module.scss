@@ -1,0 +1,49 @@
+.select_filter {
+  @include flex(row, 1rem);
+  align-items: center;
+  max-width: rem(382px);
+  width: max-content;
+  height: 3rem;
+
+  &.full {
+    max-width: 100%;
+  }
+
+  .icon {
+    min-width: rem(16px);
+    min-height: rem(16px);
+  }
+
+  .text {
+    color: $color-subtext;
+    width: max-content;
+  }
+
+  .inputWrapper {
+    border: rem(1px) solid $color-border-light;
+    border-radius: 4px;
+    outline: none;
+    width: max-content;
+    max-width: rem(90px);
+    overflow: hidden;
+    height: 100%;
+    padding: rem(10px);
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    color: $color-subtext;
+    text-transform: capitalize;
+    background-color: #fff;
+
+    &::placeholder {
+      color: $color-alt-text;
+      font-size: 0.875rem;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 1.5rem;
+    color: $color-alt-text;
+    cursor: pointer;
+  }
+}

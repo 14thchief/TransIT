@@ -1,0 +1,83 @@
+.actions {
+    @include flex(row, 1rem);
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+
+    & > * {
+        max-width: 12.5rem;
+    }
+}
+
+
+.goBack {
+    @include flex(row, rem(8px));
+    align-items: center;
+    cursor: pointer;
+    min-width: max-content;
+    padding: 1.5rem 0;
+}
+
+.container {
+    width: 100%;
+
+    .feeContainer {
+        @extend .container;
+
+        h3 {
+            padding: 1rem 0;
+        }
+    }
+    
+    .formContainer {
+        @extend .container;
+        max-width: 100%;
+
+        & > * {
+            max-width: 100% !important;
+            min-width: 10rem;
+        }
+
+        .formItemsContainer {
+            // border: gold solid 2px;
+            @include flex(column, 2rem);
+
+            .formItem {
+                border-bottom: $color-lightgrey solid 2px;
+                padding-bottom: 2rem;
+                @include flex(column, 1rem);
+
+                .toggleLabel {
+                    min-width: rem(156px);
+                    min-height: rem(36px);
+                    padding: .5rem 1rem .5rem 0;
+                    border-radius: 0.25rem;
+                    @include flex(row, .5rem);
+                    align-items: center;
+                    text-transform: capitalize;
+                }
+            }
+
+            button {
+                @include flex(row, .25rem);
+                align-items: center;
+                max-width: max-content;
+                font-size: 0.85rem;
+                font-weight: 600;
+
+                &.remove {
+                    color: $color-red;
+                }
+
+                &.add {
+                    color: $color-green-700;
+                }
+            }
+        }
+
+        .buttonContainer {
+            @include flex(row, 1.5rem);
+        }
+    
+    }
+}
+

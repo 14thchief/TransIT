@@ -1,0 +1,105 @@
+.login {
+  @include flex(column, 0px);
+  width: 100%; //mobile devices
+  max-width: rem(644px);
+  height: auto;
+  max-height: max-content;
+  border-radius: rem(24px);
+  padding: rem(32px);
+  gap: rem(24px);
+  background-color: #ffffff;
+
+  @include maxq(map-get($screen-sizes, "medium")) {
+    min-width: 100%;
+    padding: 1rem;
+  }
+
+  .heading {
+    @include flex(column, 4px);
+
+    h3 {
+      font-size: rem(28px);
+      line-height: 2rem;
+      font-weight: 600;
+      text-align: center;
+      flex: 1;
+    }
+
+    p {
+      line-height: 1.25rem;
+      font-weight: 400;
+      color: $color-light-text;
+    }
+  }
+
+  .quickAuth {
+    @include flex(row, 1rem, space);
+
+    button {
+      width: rem(277px);
+      height: rem(59px);
+      border-radius: rem(50px);
+      padding: rem(8px) rem(24px) rem(8px) rem(8px);
+      @include flex(row, 1rem);
+      align-items: center;
+
+      &:nth-child(1) {
+        background-color: #252624;
+        color: #ffffff;
+      }
+
+      &:nth-child(2) {
+        background-color: #4285f4;
+        color: #ffffff;
+      }
+
+      div {
+        width: rem(43px);
+        height: rem(43px);
+        border-radius: 50%;
+        background-color: #ffffff;
+        @include flex(row, 0, center);
+      }
+    }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: rem(12px); // Space between text and lines
+    color: #888; // Adjust text color as needed
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: rem(2px); // Thickness of the divider
+      background-color: #ccc; // Adjust color as needed
+    }
+
+    span {
+      white-space: nowrap;
+      font-size: rem(16px); // Adjust text size
+      font-weight: bold;
+    }
+  }
+
+  form.loginForm {
+    @include flex(column, 24px);
+  }
+
+  .otherActions {
+    @include flex(row, 1rem, space);
+
+    .forgotPassword {
+      @include flex(row, 0.5rem);
+
+      a {
+        text-decoration: underline;
+        color: $color-primary;
+        font-size: 1rem;
+      }
+    }
+  }
+}

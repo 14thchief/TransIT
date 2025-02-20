@@ -1,0 +1,21 @@
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: rem(12px); // Space between text and lines
+  color: #888; // Adjust text color as needed
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: rem(1px); // Thickness of the divider
+    background-color: #ccc; // Adjust color as needed
+  }
+
+  span {
+    white-space: nowrap;
+    font-size: rem(16px); // Adjust text size
+    font-weight: 400;
+  }
+}

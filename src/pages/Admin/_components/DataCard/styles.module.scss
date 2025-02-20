@@ -1,0 +1,41 @@
+.card {
+    min-width: rem(340px);
+    max-width: max-content;
+    min-height: rem(131px);
+    border: solid rem(1px) $color-border-light;
+    border-radius: rem(8px);
+    padding: 1rem;
+    background-color: #fff;
+    transform: scale(98%);
+    @include flex(row, 1rem, "space");
+
+    &.clickable {
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(100%);
+            transition: 150ms ease-in-out;
+        }
+    }
+
+    .values {
+        @include flex(column, 1rem);
+        justify-content: center;
+
+        p {
+            color: #000;
+            font-weight: 600;
+            font-size: rem(24px);
+        }
+
+        small {
+            color: $color-subtext;
+            font-size: rem(16px);
+            font-weight: 400;
+        }
+    }
+
+    .iconWrapper {
+        border-radius: rem(8px);
+    }
+}

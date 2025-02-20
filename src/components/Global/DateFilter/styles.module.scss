@@ -1,0 +1,26 @@
+.dateWrapper {
+    max-width: 100%;
+    min-width: 4.85rem;
+    height: 100%;
+    // border: red solid 3px !important;
+    @include flex(row, 0, center);
+
+    &  * {
+        max-width: 100%;
+        border: none !important;
+        outline: none !important;
+        font-size: 1rem;
+        color: $color-subtext;
+    }
+
+    // .clearButton {
+        // color: $color-text;
+        // background-color: $color-border-light;
+        // border: red solid 2px important;
+
+        // & > * {
+        //     // @extend .clearButton;
+        //     // border: red solid 2px important;
+        // }
+    // }
+}

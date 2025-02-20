@@ -1,0 +1,24 @@
+.status {
+	@include flex(column, 0);
+	width: 100%;
+	max-width: $input-max-width;
+	border: 1px solid $color-border-light;
+	border-radius: 6px;
+	padding: 0.65rem 0.5rem;
+
+	.status_field {
+		width: 100%;
+		@include flex(row, 0.25rem, start);
+	}
+
+	.no_border {
+		@include flex(row, 0.5rem, start);
+		width: max-content;
+	}
+
+	label {
+		span {
+			color: $color-red;
+		}
+	}
+}

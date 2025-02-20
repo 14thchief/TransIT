@@ -1,0 +1,42 @@
+.dateFilter {
+  @include flex(column, 1rem);
+  position: relative;
+
+  .dateRangeDisplay {
+    border: rem(1px) solid $color-border-light;
+    padding: rem(10px);
+    background-color: #fff;
+    @include flex(row, 0.5rem);
+    align-items: center;
+    height: 3rem;
+    border-radius: 0.25rem;
+
+    p {
+      color: $color-subtext;
+      min-width: max-content;
+      font-size: 0.875rem;
+    }
+  }
+
+  .datePickerWrapper {
+    padding: rem(10px);
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: rem(40px);
+
+    &.active {
+      display: block;
+
+      &.right {
+        right: 0px;
+        padding-right: 0px;
+      }
+
+      &.left {
+        left: 0px;
+        padding-left: 0px;
+      }
+    }
+  }
+}

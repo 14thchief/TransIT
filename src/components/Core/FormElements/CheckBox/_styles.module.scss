@@ -1,0 +1,47 @@
+.checkbox {
+	@include flex(row, 0.5rem);
+	align-items: center;
+
+	input {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 1.4rem;
+		height: 1.4rem;
+		min-width: 1.4rem;
+		border-radius: 5px;
+		margin-right: 0.5em;
+		outline: none;
+		cursor: pointer;
+
+		&:checked {
+			background-color: #fff;
+			border: 1px solid $color-primary;
+			position: relative;
+
+			&::before {
+				content: "\2714";
+				font-size: 1em;
+				color: $color-primary;
+				position: absolute;
+				right: 0.2em;
+				top: -0.05em;
+			}
+		}
+
+		&:disabled {
+			border-color: $color-disabled;
+			background-color: $color-disabled;
+		}
+
+		:focus {
+			box-shadow: $box-shadow-xs;
+		}
+	}
+
+	label {
+		color: $color-text;
+		opacity: 0.7;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}

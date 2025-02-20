@@ -1,0 +1,90 @@
+h1 {
+    color: $color-text;
+    font-weight: 500;
+    font-size: 1.075rem;
+}
+.rolesContainer {
+    @include flex(row, 1.25rem);
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+    .roleCard {
+        flex-basis: 48%;
+        flex: 1 1 1;
+        min-width: 14rem;
+        padding: 1.5rem;
+        border: 1px solid #EBEBEB;
+        border-radius: .5rem;
+        @include flex(row, 1rem);
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            box-shadow: $box-shadow-xs;
+            border: 1px solid darken(#EBEBEB, 10%);
+
+            .content {
+                h6 {
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        .content {
+            @include flex(column, 1rem);
+            justify-content: space-between;
+
+            h4 {
+                color: #000000;
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+
+            p {
+                color: $color-subtext;
+                font-size: .875rem;
+                line-height: 1.3125rem;
+            }
+
+            h6 {
+                font-size: .75rem;
+                font-weight: 500;
+                padding: .5rem;
+                border-radius: 50px;
+                background-color: lighten($color-primary, 0%);
+                color: #fff;
+                max-width: max-content;
+            }
+
+            .adminCircleContainer {
+                @include flex(row, 0rem);
+                align-items: center;
+                overflow-x: auto;
+
+                .adminCircle {
+                    @include flex(row, 1rem, center);
+                    padding: 1rem;
+                    height: rem(32px);
+                    width: rem(32px);
+                    border-radius: 50%;
+                    background-color: $color-primary;
+                    margin-left: -4px;
+                    
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

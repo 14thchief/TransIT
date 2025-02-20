@@ -1,0 +1,39 @@
+.radio_options {
+  display: flex !important;
+  gap: 2rem !important;
+
+  .radio {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    input {
+      max-width: max-content;
+      // accent-color: $color-green;
+      filter: hue-rotate(285deg);
+      cursor: pointer;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        color: $color-text;
+        opacity: 0.7;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: -0.05rem;
+      }
+    }
+  }
+
+  .desc {
+    align-items: flex-start;
+
+    label {
+      margin-top: -0.25rem;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.formWrapper {
+    @include flex(column, 2rem);
+
+    h1 {
+        font-size: 1rem
+    }
+
+    form {
+        @include flex(column, 2rem);
+
+        .inputRows {
+            @include flex(row, 2rem, space);
+            align-items: center;
+
+            & > * {
+                flex: 1;
+            }
+        }
+
+        // SCSS Styling for Permission Table
+        .tableWrapper {
+            @include flex(column, 1rem);
+
+            h1 {
+                font-size: 1rem;
+            }
+
+            // Table Header Styling
+            table {
+                width: 100%;
+                border-collapse: collapse;
+
+                thead {
+                    background-color: #F5F4F9;
+
+                    th {
+                        padding: 1rem;
+                        color: #676767;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        text-align: left;
+
+                        input[type="checkbox"] {
+                            width: 1.125rem;
+                            height: 1.125rem;
+                            accent-color: $color-primary;
+                            vertical-align: middle;
+                            margin-right: .25rem;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        padding: 1rem;
+                        border-bottom: 1px solid #D7D7D7;
+                        font-size: 1rem;
+                        font-weight: 400;
+
+                        td {
+                            color: #747474;
+                            padding: 1rem;
+
+                            input[type="checkbox"] {
+                            width: 1.125rem;
+                            height: 1.125rem;
+                            accent-color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttonsRow {
+            @include flex(row, 2rem, space);
+            padding: 1.25rem;
+        }
+    }
+}

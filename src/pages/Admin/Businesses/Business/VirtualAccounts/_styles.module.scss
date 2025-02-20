@@ -1,0 +1,49 @@
+
+.content {
+    @include flex(column, 2rem);
+
+    .list {
+        @include flex(row, 1rem);
+        max-width: 100%;
+        overflow: auto;
+        box-sizing: border-box;
+        padding: .25rem 0;
+    }
+    
+    .action {
+        @include flex(row, 1rem, space);
+    
+        & > * {
+            max-width: max-content;
+        }
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    .viewButton {
+        @include flex(row, 0.5rem);
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .accountDisplay {
+        @include flex(row, 1rem);
+        align-items: center;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .accountsTableWrapper {
+        @include flex(column, 0.75rem);
+    }
+
+}
+
+.toggle {
+    @include flex(row, 0.5rem);
+    align-items: center;
+}

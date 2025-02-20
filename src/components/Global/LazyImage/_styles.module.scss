@@ -1,0 +1,8 @@
+.center_image {
+  @include flex(row, 0, center);
+  cursor: default;
+}
+
+.pointer {
+  cursor: pointer;
+}

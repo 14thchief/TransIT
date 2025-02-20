@@ -1,0 +1,29 @@
+.tooltip {
+	padding: 12px;
+	border-radius: 8px;
+	background-color: $color-subtext;
+	max-width: 320px;
+
+	h4,
+	p {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+
+	h4 {
+		margin-bottom: 4px;
+	}
+
+	p {
+		font-weight: 400;
+	}
+}
+
+.tooltip_icon {
+	svg {
+		width: 24px;
+		height: 24px;
+		color: $color-text;
+	}
+}

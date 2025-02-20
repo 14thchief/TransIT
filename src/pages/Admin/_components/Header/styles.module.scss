@@ -1,0 +1,183 @@
+.header {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+
+  @include maxq(map-get($screen-sizes, "large")) {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .title {
+    width: max-content;
+    min-width: max-content;
+    max-width: 440px !important;
+    @include flex(column, 8px);
+
+    &.smaller {
+      h1 {
+        font-size: 1.25rem;
+        color: $color-black;
+        font-weight: 500;
+      }
+    }
+
+    @include maxq(map-get($screen-sizes, "medium")) {
+      min-width: 50%;
+    }
+
+    @include maxq(map-get($screen-sizes, "small")) {
+      min-width: unset;
+    }
+
+    h1 {
+      color: $color-text;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      @include maxq(map-get($screen-sizes, "medium")) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    p {
+      color: $color-subtext;
+      font-weight: 400;
+      font-size: 14px;
+
+      @include maxq(map-get($screen-sizes, "medium")) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .goBack {
+    @include flex(row, rem(8px));
+    align-items: center;
+    cursor: pointer;
+    min-width: max-content;
+    // max-width: 50rem;
+  }
+
+  .actions {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: rem(16px);
+    align-items: center;
+    flex: 1;
+
+    & > * {
+      flex: 1;
+      max-width: max-content;
+      // border: blue solid 2px;
+    }
+
+    // @include maxq(map-get($screen-sizes, "small")) {
+    // 	flex-wrap: wrap;
+    // }
+
+    button {
+      max-height: rem(48px);
+      box-sizing: border-box;
+      font-size: 14px;
+
+      @include maxq(map-get($screen-sizes, "medium")) {
+        // padding: 12px 24px;
+        font-size: 12px;
+        max-width: 133px;
+      }
+    }
+
+    .statusDiv {
+      width: 247px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 16px 24px;
+      box-sizing: border-box;
+      @include flex(row, 16px, center);
+
+      @include maxq(map-get($screen-sizes, "medium")) {
+        width: 133px;
+        height: 36px;
+        padding: 14px 20px;
+      }
+
+      p {
+        min-width: max-content;
+        font-size: 14px;
+
+        @include maxq(map-get($screen-sizes, "medium")) {
+          font-size: 12px;
+        }
+      }
+
+      &.active {
+        background-color: #1b7232;
+        border-color: #1b7232;
+
+        p {
+          color: #fff;
+        }
+      }
+
+      &.passive {
+        background-color: #fff;
+        border-color: #eaecf0;
+        box-shadow: 0px 1px 2px 0px #1018280f;
+
+        p {
+          color: $color-text;
+        }
+      }
+
+      .status {
+        width: 55px;
+        height: 24px;
+        border-radius: 16px;
+        padding: 2px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        @include maxq(map-get($screen-sizes, "medium")) {
+          height: 20px;
+          width: 50px;
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          text-align: center;
+
+          @include maxq(map-get($screen-sizes, "medium")) {
+            font-size: 10px;
+          }
+        }
+
+        &.good {
+          background-color: darken(#ecfdf3, 2%);
+
+          p {
+            color: #027a48;
+          }
+        }
+
+        &.fair {
+          background-color: darken(#fcfaf5, 2%);
+
+          p {
+            color: $color-text;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.dropdown_action {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	.icon {
+		margin-right: rem(8px);
+	}
+
+	.clear {
+		width: 100%;
+	}
+
+	.group {
+		color: $color-alt-text;
+	}
+
+	.group_list {
+		margin-bottom: rem(10px);
+	}
+
+	.content {
+		position: absolute;
+		top: 105%;
+		right: 0;
+		display: none;
+		min-width: rem(150px);
+		width: max-content;
+		max-width: 80vw;
+		height: max-content;
+		max-height: 50vh;
+		overflow: auto;
+		padding: rem(10px);
+		background-color: #fff;
+		box-shadow: #32325d40 0px 13px 27px -5px,
+			#0000004d 0px 8px 16px -8px;
+		border: .75px solid #32325d40;
+		border-radius: rem(8px);
+		z-index: 9999;
+
+		&.reverse {
+			left: auto;
+			right: 0;
+		}
+
+		&.active {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			min-height: max-content;
+		}
+
+		.actionButton {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			gap: 20px;
+			color: $color-black;
+
+			p {
+				text-transform: capitalize;
+				font-weight: 500;
+				font-size: 13px;
+				color: $color-black;
+			}
+		}
+
+		.filterGroup {
+			margin-bottom: rem(10px);
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+
+			p {
+				text-transform: capitalize;
+				font-size: 14px;
+			}
+
+			// Filter Type Variants
+			.inputStyle {
+				padding: 8px 4px;
+				border-radius: 4px;
+				border-color: $color-border-light;
+				color: $color-subtext;
+				font-weight: 600;
+
+				&:active,
+				&:focus,
+				&:hover {
+					outline-color: $color-border-light;
+				}
+			}
+
+			//Dropdown
+			.dropdown {
+				@extend .inputStyle;
+			}
+
+			//Date Wrapper
+			.dateRangeWrapper {
+				// border: red solid 2px;
+				max-width: 100%;
+				box-sizing: border-box;
+				overflow-x: auto;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			min-width: max-content;
+
+			li {
+				display: flex;
+				gap: rem(10px);
+				padding: rem(10px);
+				font-weight: 400;
+			}
+		}
+
+		.item {
+			padding: rem(5px) rem(10px);
+
+			input {
+				cursor: pointer;
+			}
+		}
+	}
+}

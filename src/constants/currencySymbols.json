@@ -1,0 +1,32 @@
+[
+    {
+      "code": "NGN",
+      "symbol": "₦",
+      "name": "Naira",
+      "uniqueId": ""
+    },
+    {
+      "code": "USD",
+      "symbol": "$",
+      "name": "Dollars",
+      "uniqueId": ""
+    },
+    {
+      "code": "YEN",
+      "symbol": "￥",
+      "name": "Yuan",
+      "uniqueId": ""
+    },
+    {
+      "code": "GBP",
+      "symbol": "£",
+      "name": "Pounds",
+      "uniqueId": ""
+    },
+    {
+      "code": "EUR",
+      "symbol": "€",
+      "name": "Euro",
+      "uniqueId": ""
+    }
+  ]

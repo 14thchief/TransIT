@@ -1,0 +1,11 @@
+.container {
+    min-width: rem(32px);
+    min-height: rem(32px);
+    @include flex(row, 1rem, center);
+    border-radius: 50%;
+
+    & > * {
+        font-size: rem(17px);
+        
+    }
+}

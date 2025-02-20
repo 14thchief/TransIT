@@ -1,0 +1,54 @@
+.card {
+    border: lighten($color-primary, 40%) solid 0.1px;
+    border-radius: .5rem;
+    @include flex(column, .5rem);
+    padding: 1rem;
+    width: 16.5rem;
+    min-width: 14rem;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: lighten($color-primary, 38%) 0.5px 0.5px 1px 0.5px;
+    }
+
+    &.active {
+        border-width: 2px;
+        background-color: lighten($color-primary, 44%);
+    }
+
+    .name {
+        @include flex(row, .5rem);
+
+        .bankName {
+
+            p {
+                font-weight: 400;
+                font-size: rem(14px);
+            }
+    
+            strong {
+                font-size: rem(14px);
+            }
+        }
+
+    }
+
+    .number {
+        @include flex(row, 1rem, space);
+        align-items: center;
+    }
+
+    .balance {
+
+        p {
+            font-size: rem(14px);
+            font-weight: 400;
+        }
+
+        strong {
+            font-size: rem(20px);
+            font-weight: 700;
+        }
+        
+    }
+}

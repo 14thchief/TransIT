@@ -1,0 +1,150 @@
+.table_wrapper {
+	width: 100%;
+	border-radius: rem(10px);
+	background-color: #fff;
+	position: relative;
+}
+
+.table_header_body_wrapper {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	color: $color-subtext;
+	font-size: 14px;
+	font-weight: 500;
+	position: relative;
+
+	.header_row {
+		background-color: $color-lightgrey;
+		border-bottom: rem(1px) solid $color-border-light;
+	}
+
+	.header_title {
+		background-color: unset;
+
+		& > th {
+			padding: rem(16px);
+
+			.header {
+				@include flex(row, 1rem, space);
+
+				h3 {
+					@include flex(row, 1rem, "center");
+
+					.tableCount {
+						@include flex(row, 0.5rem, start);
+						font-size: rem(14px);
+						font-weight: 500;
+						background-color: $backgroundColorActive;
+						padding: rem(4px) rem(12px);
+						border-radius: rem(16px);
+						color: $color-primary;
+						span {
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header-row > th {
+		font-size: 16px;
+		font-weight: 500;
+
+		&:first-child {
+			border-top-left-radius: rem(10px);
+		}
+		&:last-child {
+			border-top-right-radius: rem(10px);
+		}
+	}
+
+	.header_row > th > div > span {
+		background-color: $color-lightgrey;
+		margin-left: rem(16px);
+		padding: rem(2px) rem(4px);
+		border: 1px solid $color-border-light;
+		border-radius: 6px;
+		cursor: pointer;
+
+		svg {
+			margin: auto;
+		}
+	}
+
+	.header_row > th,
+	.body_row > td {
+		text-align: start;
+		padding: rem(15px);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 18px;
+	}
+
+	.header_row:not(:first-child) > th,
+	.body_row {
+		border-bottom: rem(1px) solid $color-border-light;
+
+		// &:last-child {
+		// 	border-bottom: none;
+		// }
+	}
+
+	.body_row > td {
+		color: $color-text;
+		font-weight: 500;
+	}
+
+	.footer_cell {
+		padding: rem(5px);
+	}
+
+	.footer_content {
+		margin: rem(16px) 0;
+		padding-left: rem(16px);
+		padding-right: rem(16px);
+	}
+
+	.loader {
+		width: 100%;
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.empty_data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: rem(420px);
+	text-align: center;
+}
+
+.grid_view {
+	width: 100%;
+	@include flex(column, 1rem, "");
+	position: relative;
+
+	.grid_footer {
+		border: 1px solid $color-alt-text;
+		border-radius: 10px;
+		padding: 0.5rem;
+		margin-top: 1rem;
+	}
+}
+
+.suspenseWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+}
