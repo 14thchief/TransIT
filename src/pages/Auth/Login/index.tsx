@@ -22,7 +22,8 @@ const Login = () => {
     login(data as SigninPayload)
       .unwrap()
       .then((response) => {
-        response.accessToken && toast.success("Signed in successfully");
+        console.log({ response });
+        response && toast.success("Signed in successfully");
         // navigate("/admin/businesses");
       })
       .catch((error: any) => {
@@ -59,7 +60,7 @@ const Login = () => {
         >
           <FormElement
             type="email"
-            fieldName="email"
+            fieldName="username"
             fieldLabel="Email Address"
             hideLabel
             placeholder="Enter e-mail"

@@ -1,7 +1,7 @@
 import { Role } from "../../admin/types/roleManagementType";
 
 export type SigninPayload = {
-  email: string;
+  username: string;
   password: string;
 };
 
