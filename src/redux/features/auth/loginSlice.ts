@@ -29,7 +29,7 @@ const loginSlice = authApi.injectEndpoints({
         }
       },
     }),
-    sendResetLink: builder.mutation<SignedUser, SigninPayload["email"]>({
+    sendResetLink: builder.mutation<SignedUser, SigninPayload["username"]>({
       query: (data) => ({
         url: "auth/forgot-password",
         method: "POST",
