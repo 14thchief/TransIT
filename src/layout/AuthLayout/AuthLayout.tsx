@@ -1,8 +1,6 @@
 import { Outlet } from "react-router";
 import styles from "./_styles.module.scss";
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
-import Logo from "components/Global/Logo";
 
 const AuthLayout = ({ children }: { children?: ReactNode }) => {
   return (

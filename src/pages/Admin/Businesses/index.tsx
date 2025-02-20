@@ -97,7 +97,7 @@ const Businesses = () => {
         <div
           onClick={() => {
             dispatch(highlightBusiness(row.original));
-            navigate(`/admin/businesses/${row.original.name}`);
+            // navigate(`/admin/businesses/${row.original.name}`);
           }}
         >
           <p className={`${styles.link} ${styles.business_name}`}>

@@ -3,11 +3,9 @@ import styles from "./_styles.module.scss";
 import { validateEmail } from "src/constants/validations";
 import { FieldValues, FormProvider, useForm } from "react-hook-form";
 import Button from "components/Core/Button";
-import { Link, useNavigate } from "react-router-dom";
 import { useSignInMutation } from "src/redux/features/auth/loginSlice";
 import { SigninPayload } from "src/redux/features/auth/types/loginType";
 import { toast } from "react-toastify";
-import { BsGoogle } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoApple } from "react-icons/io5";
 import Divider from "components/Global/Divider";
@@ -16,7 +14,7 @@ import Divider from "components/Global/Divider";
 const Login = () => {
   const methods = useForm({ mode: "all" });
   const { handleSubmit } = methods;
-  const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   const [login, { isLoading }] = useSignInMutation();
 
